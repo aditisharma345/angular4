@@ -1,0 +1,42 @@
+<h1>App-component</h1>
+<!-- <ul>
+  <li><a routerLink="admin/login">login</a></li>
+  <li><a routerLink="admin/list">list</a></li>
+  <li><a routerLink="user/login">user-login</a></li>
+  <li><a routerLink="user/list">user-list</a></li>
+  <li><a routerLink="loading/adminlist">adminlist</a></li>
+  <li><a routerLink="loading/userlist">loading-list</a></li>
+</ul>
+<router-outlet></router-outlet> -->
+
+<div class="container">
+ 
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" [routerLink]="['/']"><strong> {{title}} </strong></a>
+      </div>
+      <ul class="nav navbar-nav"><!--  -->
+          <li><a [routerLink]="['home']">Home</a></li>
+          <li><a [routerLink]="['product']">Product</a></li>
+          <li><a [routerLink]="['contact']">Contact us</a></li>
+          
+      </ul>
+    </div>
+  </nav>
+   
+  
+   <div class="spinner" *ngIf="displayLoadingIndicator"></div>
+  </div>
+  <app-binding></app-binding>
+<!-- 
+  <div>/* heros routing*/
+    <a [routerLick]="['products']" routerLickActive="true" ariaCurrentWhenActive="page">Crisis</a>
+    <a [routerLick]="['productdetails']" routerLickActive="true" ariaCurrentWhenActive="page">Hero</a> -->
+  </div> <router-outlet></router-outlet>
+ 
+ <!-- <app-Emulated-encapsulation></app-Emulated-encapsulation> --> 
+<!-- lazy loading component are used bcoz suppose there are alot of components so when we render the app,all components are rendered at the same time which makes the app slower. so loazy loading component is used so,that components are called only when they are in used or called  -->
+<!-- eager loading will be loaded before the application starts -->
+<!-- pre loading will be loaded automatically after the application starts -->
+<!-- ComponentFixture used for debugging and testing a component -->

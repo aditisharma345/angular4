@@ -1,0 +1,34 @@
+<p>binding works!</p>
+<!-- property binding;attribute binding;event binding;two way binding -->
+<!-- property binding moves values in one direction from components property to target event property 
+for eg.=><img [src]="imgurl" alt="item"/> -->
+<!-- <a [style.backgroundcolor]="backgroundcolor">backgroundcolor</a> -->
+<!-- <img [src]="imageurl" alt="imageurl" >property binding -->
+<!-- <img [attr.src]="imageurl" alt="imageurl" >attribute binding<br><br><br><br> -->
+<!-- <button (click)="click()">click</button> -->
+<!-- <button style="color: brown;" (click)="clickmessage($event)">click</button> -->
+<!-- 
+<button (click)="dec()">dec</button>
+<button (click)="inc()">inc</button>
+<button [style.font-size.px]="size"> {{size}}</button> -->
+<!-- 
+<div style="border: 1px solid rgb(46, 93, 194);
+			height: 25vh;
+			width: 35vw;
+			padding: 10px 10px;
+			margin: 20px;" >
+
+	<b>Type here : </b>
+	<input type="text"
+	[ngModel]='text'
+	(ngModelChange)='onChange($event)' />
+	<button [message]='text'></button>
+	
+</div>
+ --><!-- for ngModel =>import formsmodule in apps.module.ts -->
+ <div>
+	<h2>search:</h2>
+	<!-- <input type="text" (input)="changesearchvalue($event)" placeholder="{{searchvalue}}"> -->
+	<input type="text" [(ngModel)]="searchvalue" placeholder="{{searchvalue}}">
+	<span> {{searchvalue}} </span>
+ </div>
